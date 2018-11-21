@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_827286_28wquafq88s.css">
+    <title>股票操盘</title>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <span id="backpre" href="javascript:;" onclick="backpre()">
+            <i class="iconfont icon-back"></i>
+        </span>
+        <span class="text">股票操盘</span>
+    </div>
+    <div class="margintop"></div>
+    <div class="gpcp">
+        <div class="gpcptop">
+            <div class="gpcptopleft">
+                操盘账号：<?php echo $user['account_name'];?>
+            </div>
+            <div class="gpcptopleft">
+                <a href="">
+                    退出登录
+                </a>
+            </div>
+        </div>
+        <div class="gpcpnav">
+            <ul>
+                <li class="sp_1 active">买&nbsp;&nbsp;入</li>
+                <li class="sp_3">卖&nbsp;&nbsp;出</li>
+                <li class="sp_2">撤&nbsp;&nbsp;单</li>
+                <li class="sp_5">持仓</li>								
+                <li class="sp_6">当日委托</li>
+                <li class="sp_7">当日成交</li>
+                <li class="sp_6">历史委托</li>
+                <li class="sp_7">历史成交</li>
+                <li class="sp_8">资金流水</li>
+                <!--<li class="sp_9"><a href="javascript:" onclick="InterestData(0)">平仓记录</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="gpcpdesc box strategytype">
+        <div class="title">
+            <div class="line"></div>
+            <span>合约详情</span>
+        </div>
+        <div class="item co">
+                <div class="overview">
+                    <p>
+                        <span  class="numbering">合同编号： hdpzrj020010001000120180804100656</span>
+                        <span class="cpz">操盘中</span>
+                    </p>
+                    <p >
+                        <span class="type">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型： 天配</span>
+                    </p>
+                    <p >
+                        <span class="time">合约时间： 2018/08/04-2018/08/07</span>
+                    </p>
+                    <p >
+                        <span class="ntime">剩余时间： <span class="colorblue">3天/0时/28分</span></span>
+                    </p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                            <div class="item">
+                                <span>策略保证金</span>
+                                <span class="coloryellow">2000</span>   
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns">
+                        <button>终止操盘</button>
+                        <span class="zjcz"> <i class="iconfont icon-selected"></i> 您的资金充足,请多注意盘中变化！  </span>
+                        <button class="bc">补充保证金</button>
+                </div>
+            </div>
+    </div>
+    <!-- a -->
+    <div class="gpcpitema">
+        <div class="item">
+            <span>今开</span>
+            <span>
+                <span class="coloryellow">1000</span>
+                元
+            </span>
+        </div>
+        <div class="item">
+            <span>最高</span>
+            <span>
+                <span class="coloryellow">48.8</span>
+                元
+            </span>
+        </div>
+        <div class="item">
+            <span>最低</span>
+            <span>
+                <span class="coloryellow">63714.60</span>
+                元
+            </span>
+        </div>
+    </div>
+    <!-- b -->
+    <div class="gpcpitemb">
+        <div class="item">
+            <span>涨停价</span>
+            <span>
+                <span class="coloryellow">1000</span>
+                元
+            </span>
+        </div>
+        <div class="item">
+            <span>跌停价</span>
+            <span>
+                <span class="coloryellow">63714.60</span>
+                元
+            </span>
+        </div>
+    </div>
+    <div class="gpcpitemcd">
+        <!-- c -->
+    <div class="gpcpitemc">
+            <span>
+                证劵代码:
+            </span>
+            <label for="">
+                <input type="text"> 
+            </label>
+            <span>
+                证劵名称:
+            </span>
+            <span class="coloryellow">
+                刷新
+            </span>
+            <span>
+                当前价格:
+            </span>
+            <span class="coloryellow">
+                0.00
+            </span>
+            <div class="wtjg">
+                <span >
+                    委托价格:
+                </span>
+                <span class="sjmr coloryellow">
+                    市价买入
+                </span>
+            </div>
+            <label for="" class="text">
+                <input type="text"> 
+                <span class="les">-</span>
+                <span class="add">+</span>
+            </label>
+            <span>
+                最大可卖:
+            </span>
+            <span class="coloryellow">
+                0000
+            </span>
+            <span class="mcsl">
+                卖出数量:
+            </span>
+            <label for="">
+                <select name="" id="">
+                    <option value=""></option>
+                </select>
+            </label>
+        </div>
+        <!-- d -->
+        <div class="gpcpitemd">
+            <table>
+                <tr>
+                    <th>盘口</th>
+                    <th>价格</th>
+                    <th>数量</th>
+                </tr>
+                <tr>
+                    <td>卖5</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖4</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖3</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖2</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr style="border-bottom:1px solid #999">
+                    <td>卖1</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖5</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖4</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖3</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖2</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>卖1</td>
+                    <td class="coloryellow">0.00</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <button class="dbtn login">确认提交</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="mytable">
+        <table>
+            <tr>
+                <th>类型</th>
+                <th>发生时间</th>
+                <th>发生金额</th>
+                <th>手续费</th>
+                <th>发生后余额</th>
+                <th>证劵代码</th>
+                <th>证劵名称</th>
+            </tr>
+            <tr>
+                <td>转入</td>
+                <td>09-09 12:09:09</td>
+                <td>9009.98</td>
+                <td>9009.98</td>
+                <td>9009.98</td>
+                <td>9009.98</td>
+                <td>天一证劵</td>
+            </tr>
+            <tr>
+                <td>转入</td>
+                <td>09-09 12:09:09</td>
+                <td>9009.98</td>
+                <td>9009.98</td>
+                <td>9009.98</td>
+                <td>9009.98</td>
+                <td>天一证劵</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<!-- js -->
+<script src="./js/rem.js"></script>
+<script src="./js/main.js"></script>

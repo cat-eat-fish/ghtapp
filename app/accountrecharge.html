@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--include file "common.php"-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_827286_28wquafq88s.css">
+    <title>账户充值</title>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <span id="backpre" href="javascript:;" onclick="backpre()">
+            <i class="iconfont icon-back"></i>
+        </span>
+        <span class="text">账户充值</span>
+    </div>
+    <div class="margintop"></div>
+    <!--  -->
+    <div class="box">
+        <div class="title">
+            <div class="line"></div>
+            <span>选择支付方式</span>
+        </div>
+        
+        <div class="paytype">
+            <div class="wyzf active">
+                网银支付
+            </div>
+            <div class="wyzf xxcz">
+                线下充值
+            </div>
+            <div class="wyzf wxcz">
+                微信充值
+            </div>
+        </div>
+        
+            
+    </div>
+    <!-- 支付方式1.网银支付 -->
+    <div class="box write">
+        <div class="title">
+            <div class="line"></div>
+            <span>填写充值金额</span>
+        </div>
+        <!-- 1.网银支付 -->
+        <form action="" class="logoform wyzfbox">
+            <p class="use">可用金额: <span class="coloryellow">316837.84</span><span class="color9">元</span></p>
+            <p >
+                <span class="spanl">充值金额: </span>    
+                <label for="">
+                    <input type="text" id="money" type="submit" name="money">
+                    <span class="color9">元</span>
+                </label>
+            </p>
+            <p>实际支付金额: <span class="coloryellow">100000</span><span class="color9">元</span> </p>
+            <button class="login" id="bankpay">提交</button>
+        </form>
+        <!-- 2.线下充值 -->
+        <form action="" class="logoform xxczbox">
+            <p class="use">可用金额: <span class="coloryellow">316837.84</span><span class="color9">元</span></p>
+            <p >
+                <span class="spanl">充值金额: </span>    
+                <label for="">
+                    <input type="text" id="money" name="money">
+                    <span class="color9">元</span>
+                </label>
+            </p>
+            <p>实际支付金额: <span class="coloryellow">100000</span><span class="color9">元</span> </p>
+            <button class="login" id="bankpay">提交</button>
+        </form>
+        <!-- 3.微信支付 -->
+        <form action="" class="logoform wxzfbox">
+            <p class="use">可用金额: <span class="coloryellow">316837.84</span><span class="color9">元</span></p>
+            <p >
+                <span class="spanl">充值金额: </span>    
+                <label for="">
+                    <input type="text" id="money" name="money">
+                    <span class="color9">元</span>
+                </label>
+            </p>
+            <p>实际支付金额: <span class="coloryellow">100000</span><span class="color9">元</span> </p>
+            <button class="login" id="bankpay">提交</button>
+        </form>
+    </div>
+    <!--  -->
+    <div class="wxtstext">
+        <p class="coloryellow">温馨提示:</p>
+        <p class="color9">1、为了您的资金安全，您的账户资金将专款专户管理；</p>
+        <p class="color9">2、请使用PC端IE浏览器进行充值，未返回充值成功页面之前勿关闭页面；普通版网银有限额，请使用U盾或专业版网银；</p>
+        <p class="color9">3、禁止洗钱、信用卡套现、虚假交易等行为，一经发现并确认， 将终止该账户的使用；</p>
+        <p class="color9">4、为了您的资金安全，建议充值前进行实名认证；</p>
+        <p class="color9">5、如果充值遇到任何问题，请致电服务热线或联系在线客服为您解决。</p>
+    </div>
+    <!-- 提示框2 -->
+    <div class="prompt2shadow"></div>
+    <div class="prompt2">
+        <div class="prompt2-container">
+            <div class="prompt2-title">
+                <div>温馨提示</div>
+                <div class="close">×</div>
+            </div>
+            <div class="prompt2-content">
+                <!-- <div class="tip message" >
+                    温馨提示：请妥善保管您的账户密码，切勿告诉他人。
+                </div> -->
+                <p class="msg">adddddddddddddddddd</p>
+                <div class="actions">
+                    <button class="close">取消</button>
+                    <button class="qd close">确定</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
+<!-- js -->
+<script src="./js/rem.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    // 表单验证类
+    function isnumber(){
+        let patt = /^\d{1,10}$/;
+        let number = document.querySelector('.write input').value;
+        if(number==''){
+            document.querySelector('.prompt2 .msg').innerHTML="请输入要充值的金额。";
+            document.querySelector('.prompt2shadow').style.cssText="display:block;"
+            document.querySelector('.prompt2').style.cssText="display:block;"
+            return false;
+        }
+        if(!patt.test(number)){
+            document.querySelector('.prompt2 .msg').innerHTML="请正确输入充值金额。";
+            document.querySelector('.prompt2shadow').style.cssText="display:block;"
+            document.querySelector('.prompt2').style.cssText="display:block;"
+            return false;
+        }else{
+            console.log(number)
+            return false;
+        }
+    }
+    // 选择支付方式
+    document.querySelectorAll('.paytype .wyzf').forEach((element,index)=>{
+        element.onclick=function(){
+            document.querySelectorAll('.paytype .wyzf').forEach((element2,index2)=>{
+                element2.classList.remove('active')
+            })
+            this.classList.add('active');
+            document.querySelectorAll('.write .logoform').forEach((ele,ind)=>{
+                // ele.style.cssText="display:none;"
+                
+            })
+            document.querySelectorAll('.write .logoform')[index].style.cssText="display:block;"
+        }
+    }) 
+    // 账户充值
+    document.querySelector('#bankpay').onclick=isnumber;
+    document.querySelectorAll('.close').forEach((element,index)=>{
+        element.onclick=function(){
+            element.getAttribute
+            document.querySelector('.prompt2shadow').style.cssText="display:none;"
+            document.querySelector('.prompt2').style.cssText="display:none;"
+        }
+    })
+</script>

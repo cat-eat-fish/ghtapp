@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_827286_28wquafq88s.css">
+    <title>按月策略</title>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <span id="backpre" href="javascript:;" onclick="backpre()">
+            <i class="iconfont icon-back"></i>
+        </span>
+        <span class="text">按月策略</span>
+    </div>
+    <div class="margintop"></div>
+    <!--  -->
+    <div class="box">
+        <div class="title">
+            <div class="line"></div>
+            <span>策略保证金</span>
+        </div>
+        <ul class="items clbzj">
+            <li class="active" data-num="400">
+                400
+            </li>
+            <li data-num="1000">
+                1000
+            </li>
+            <li data-num="5000">
+                5000
+            </li>
+            <li data-num="10000">
+                1万
+            </li>
+            <li data-num="20000">
+                2万
+            </li>
+            <li data-num="50000">
+                5万
+            </li>
+            <li data-num="100000">
+                10万
+            </li>
+            <li  data-num="">
+                <input type="text" placeholder="其他金额" name="clbzj">
+            </li>
+        </ul>
+    </div>
+    <!--  -->
+    <div class="box clzj">
+        <div class="title">
+            <div class="line"></div>
+            <span>策略资金</span>
+        </div>
+        <ul class="items clzja">
+            <li class="active" data-bs="3">
+                <span class="bs">3倍</span>
+                <span class="zj">1200元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="4">
+                <span class="bs">4倍</span>
+                <span class="zj">1600元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="5">
+                <span class="bs">5倍</span>
+                <span class="zj">2000元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="6">
+                <span class="bs">6倍</span>
+                <span class="zj">2400元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="7">
+                <span class="bs">7倍</span>
+                <span class="zj">2800元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="8">
+                <span class="bs">8倍</span>
+                <span class="zj">3200元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="9">
+                <span class="bs">9倍</span>
+                <span class="zj">3600元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+            <li data-bs="10">
+                <span class="bs">10倍</span>
+                <span class="zj">4000元</span>
+                <span class="glf">月利率1.6%</span>
+            </li>
+        </ul>
+    </div>
+    <!--  -->
+    <div class="box qrhy">
+        <div class="title">
+            <div class="line"></div>
+            <span>确认合约规则</span>
+            <span class="xm">每日限买股 <i class="iconfont icon-more"></i></span>
+        </div>  
+        <ul class="lis logoform">
+            <li>
+                <span class="fc">操盘须知</span>
+                <span>投资沪深A股，盈利全归你</span>
+            </li>
+            <li>
+                <span class="fc">总操盘资金</span>
+                <span><span class="coloryellow" id="zcpzj">1600</span>元</span>
+            </li>
+            <li>
+                <span class="fc">配备保证金</span>
+                <span class="haspopup"><span class="coloryellow" id="pbbzj">400</span>元 <i class="hasbg iconfont icon-information"></i>
+                <div class="popup">在您操盘出现亏损后用于亏损金，结束时如无亏损金额退还，保证金越低收益越大，同时风险也越大。</div></span>
+            </li>
+            <li>
+                <span class="fc">亏损警告线</span>
+                <span><span class="colorred" id="ksjgx">1400</span>元 <i class="iconfont icon-information"></i></span>
+            </li>
+            <li>
+                <span class="fc">亏损平仓线</span>
+                <span><span class="colorred" id="kspcx">1320</span>元 <i class="iconfont icon-information"></i></span>
+            </li>
+            <li>
+                <span class="fc">盈利提醒线</span>
+                <span><span class="colorblue" id="yltxx">1320</span>元 <i class="iconfont icon-information"></i></span>
+            </li>
+            <li>
+                <span class="fc">资金使用期限</span>
+                <span>
+                    <select name="usetime" id="usetime">
+                        <option value="2">1月</option>
+                    </select> 
+                    <i class="iconfont icon-information"></i>
+                    <span class="font24 colorblue">最短1月，到期自动延期</span>
+                </span>
+            </li>
+            <li>
+                <span class="fc">账户利息</span>
+                <span><span class="coloryellow">1.62</span>元/每天 <span class="fk">周末节假日免费</span>  </span>
+            </li>
+            <li>
+                <span class="fc">应支付</span>
+                <span>共<span class="coloryellow">403.24</span>元</span>
+            </li>
+            <button class="login">马上操盘</button>
+        </ul>
+    </div>
+    <p class="yw color9">如您不清楚规则，或有其他疑问，请联系国华通股票策略软件</p>
+    <p class="yw color9 p2">《客服QQ：<span class="colorblue">3288281032</span>》</p>
+</body>
+</html>
+<!-- js -->
+<script src="./js/rem.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    window.onload=function(){
+        //初始化
+        let clbzj = Number(document.querySelector('.clbzj li.active').getAttribute('data-num'));            //策略保证金
+        let clzj = document.querySelector('.clzja li.active').getAttribute('data-bs') * clbzj;              //策略资金
+        let zcpzj = clbzj + clzj;
+        let pbbzj = clbzj;
+        document.querySelector('#zcpzj').innerHTML=zcpzj;
+
+        // 策略保证金 点击事件
+        document.querySelectorAll('ul.clbzj li').forEach((element,index)=>{
+            element.onclick=function(){
+                let number = element.getAttribute('data-num');
+                document.querySelectorAll('ul.clzja li').forEach((ele2,index)=>{
+                    let bs = ele2.getAttribute('data-bs');
+                    let nowbs = document.querySelector('ul.clzja li.active').getAttribute('data-bs')
+                    ele2.querySelector('.zj').innerHTML=number * bs + '元'
+                    clbzj = Number(number)
+                    clzj = number * nowbs;
+                    zcpzj = clbzj + clzj;
+
+                })
+                document.querySelector('#zcpzj').innerHTML=zcpzj;
+
+                document.querySelectorAll('ul.clbzj li').forEach((ele,index)=>{
+                    ele.classList.remove('active');
+                })
+                document.querySelectorAll('ul.clbzj li')[index].classList.add('active');
+            }
+        })
+
+        // 策略资金 点击事件
+        document.querySelectorAll('ul.clzja li').forEach((element,index)=>{
+            element.onclick=function(){
+                
+                document.querySelectorAll('ul.clzja li').forEach((ele,index)=>{
+                    ele.classList.remove('active');
+                })
+                document.querySelectorAll('ul.clzja li')[index].classList.add('active');
+
+                let number = document.querySelector('ul.clbzj li.active').getAttribute('data-num');
+                let nowbs = document.querySelector('ul.clzja li.active').getAttribute('data-bs')
+                clbzj = Number(number)
+                clzj = number * nowbs;
+                zcpzj = clbzj + clzj;
+                document.querySelector('#zcpzj').innerHTML=zcpzj;
+
+
+            }
+        })
+        // 输入框 输入事件
+        document.querySelector('ul.clbzj li input[name=clbzj]').oninput=function(){
+            this.parentNode.setAttribute('data-num',this.value)
+            let number = this.parentNode.getAttribute('data-num');
+            document.querySelectorAll('ul.clzja li').forEach((ele2,index)=>{
+                let bs = ele2.getAttribute('data-bs');
+                let nowbs = document.querySelector('ul.clzja li.active').getAttribute('data-bs')
+                document.querySelectorAll('ul.clzja li').forEach((ele,index)=>{
+                    ele2.querySelector('.zj').innerHTML=number * bs + '元'
+                })
+                clbzj = Number(number)
+                clzj = number * nowbs;
+                zcpzj = clbzj + clzj;
+
+                document.querySelector('#zcpzj').innerHTML=zcpzj;
+            })
+        }
+    }
+</script>

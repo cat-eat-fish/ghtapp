@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_827286_28wquafq88s.css">
+    <title>登录</title>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <span id="backpre" href="javascript:;" onclick="backpre()">
+            <i class="iconfont icon-back"></i>
+        </span>
+        <span class="text">登录</span>
+    </div>
+    <div class="margintop"></div>
+    <!-- logo -->
+    <div class="welcome">
+        <img src="./img/logo2.png" alt="国华通">
+        <p class="text">欢迎来到国华通</p>
+    </div>
+    <!-- 表单 -->
+    <div class="logoform">
+        <form action="">
+            <label for="" class="user">
+                <i class="iconfont icon-account"></i>
+                <input type="text" name="username" id="username" placeholder="用户名/手机号码">
+            </label>
+            <label for="" class="pass">
+                <i class="iconfont icon-mima"></i>
+                <input type="password" placeholder="密码" name="password" id="password">
+                <i data-isshow="false" id="yanjing" class="yanjing iconfont icon-yanjing-bi"></i>
+            </label>
+            <button class="login">登录</button>
+        </form>
+    </div>
+    <!--  -->
+    <div class="loginmore">
+        <a href="" class="forget">忘记密码</a>
+        <span class="loginregister">
+            还没有账号？<a href="">立即注册</a>
+        </span>
+    </div>
+    <!-- 提示框 -->
+    <div class="prompt">
+        <div class="myframe">
+            <!-- <i class="close">×</i> -->
+            <div class="title">温馨提示</div>
+            <div class="content">
+                输入的金额不正确，请重新输入！
+            </div>
+            <div class="foot">
+                <button class="close" onclick="closeprompt()">
+                    取消
+                </button>
+                <button class="myconfirm" onclick="closeprompt()">
+                    确认
+                </button>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
+<!-- js -->
+<script src="./js/rem.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    window.onload=function(){
+        document.querySelector('i#yanjing').onclick=function(){
+            if(this.getAttribute('data-isshow') == 'false'){
+                document.querySelector('#password').setAttribute('type',"text")
+                this.setAttribute('data-isshow',"true")
+                this.classList.remove('icon-yanjing-bi')
+                this.classList.add('icon-yanjing')
+            }else{
+                document.querySelector('#password').setAttribute('type',"password")
+                this.setAttribute('data-isshow',"false")
+                this.classList.remove('icon-yanjing')
+                this.classList.add('icon-yanjing-bi')
+            }
+        }
+    }
+    function login(){
+        let pattuser = /^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/;
+        let username = document.querySelector('#username').value;
+        let password = document.querySelector('#password').value;
+        if(username == ''){
+            document.querySelector('.prompt .myframe .content').innerHTML="请输入用户名。";
+            document.querySelector('.prompt').style.cssText="display:block";
+            return false;
+        }else if(!pattuser.test(username)){
+            document.querySelector('.prompt .myframe .content').innerHTML="请正确输入用户名。";
+            document.querySelector('.prompt').style.cssText="display:block";
+            return false;
+        }else if(password == ''){
+            document.querySelector('.prompt .myframe .content').innerHTML="请输入密码。";
+            document.querySelector('.prompt').style.cssText="display:block";
+            return false;
+        }else{
+
+        }
+    }
+</script>

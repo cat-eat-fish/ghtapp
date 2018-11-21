@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_827286_28wquafq88s.css">
+    <title>关于我们</title>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <span id="backpre" href="javascript:;" onclick="backpre()">
+            <i class="iconfont icon-back"></i>
+        </span>
+        <span class="text">关于我们</span>
+    </div>
+    <div class="margintop"></div>
+    <!--  -->
+    <div class="abouttop">
+        <div class="abouttext">
+            <span class="gradient_1"></span>
+            <span class="text"> 核心价值观 </span>
+            <span class="gradient_2"></span>
+        </div>
+        <p class="textcenter"> 诚信 专业 成长 </p>
+    </div>
+    <!--  -->
+    <div class="aboutusdesc">
+        <div class="desc" data-isshow=false>
+            国华通股票策略软件(<span class="coloryellow">www.hdpzrj.com</span>)是湖北**网络科技有限公司独立运营的互联策略服务平台，将线下策略服务提升至互联网策略服务，为广大股民、投资者轻松实现股票策略是湖北**网络科技有限公司独立运营的互联策略服务平台，将线下策略服务提升至互联网策略服务，为广大股民、投资者轻松实现股票策略
+        </div>
+    </div>
+    <h3 id="lookdetails" class="lookmore colorblue">查看详情 <i class="iconfont icon-moreunfold"></i></h3>
+    <!-- 优势 -->
+    <div class="aboutusbox ys">
+        <div class="aboutusboxtitle">
+            我们的优势
+        </div>
+        <ul class="aboutusboxcontent">
+            <li>
+                <span class="coloryellow">按天配资:</span> 
+                <span>3-10倍杠杆，按天计算管理费，周末节假日免费，灵活便捷。</span>    
+            </li>
+            <li>
+                <span class="coloryellow">按月配资:</span> 
+                <span>3-8倍杠杆，按月计息更划算，无管理费及其它费用。</span>    
+            </li>
+            <li>
+                <span class="coloryellow">超低费用:</span> 
+                <span>利息低至1.6% ，券商佣金1.5‰。</span> 
+            </li>
+        </ul>
+    </div>
+    <!-- 使命 -->
+    <div class="aboutusbox sm">
+        <div class="aboutusboxtitle">
+            我们的使命
+        </div>
+        <ul class="aboutusboxcontent">
+            <li class="text">
+                    通过持之以恒的产品创新和服务优化，创造性地满足投资者的金融理财需求，使客户资产财富如“国华通股票策略软件”般快速增长！
+            </li>
+        </ul>
+    </div>
+    <!-- 价值观 -->
+    <div class="aboutusbox jzg">
+        <div class="aboutusboxtitle">
+            核心价值观
+        </div>
+        <ul class="aboutusboxcontent">
+            <li>
+                <span class="coloryellow">诚信:</span>
+                <span>坚守诚信原则, 重视职业操守, 加强互信关系, 树立优质品牌。</span> 
+            </li>
+            <li>
+                <span class="coloryellow">专业:</span>
+                <span>整合有效资源, 借鉴成功案例, 提高专业水平, 打造精英团队。</span>
+            </li>
+            <li>
+                <span class="coloryellow">成长:</span>
+                <span>保持快速发展，努力实现共赢，让客户、员工与企业共同成长。</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<!-- js -->
+<script src="./js/rem.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    // 关于我们的简介
+    var aboutusdesc = document.querySelector('.aboutusdesc .desc').innerHTML;
+    var aboutusdescb = aboutusdesc;
+    window.onload=function(){
+        document.querySelector('.aboutusdesc .desc').innerHTML = aboutusdesc.slice(0,130)+'...';
+    }
+    //  查看详情
+    function lookdetails(){
+        let isshow = document.querySelector('.aboutusdesc .desc').getAttribute('data-isshow');
+        if(isshow=='true'){
+            document.querySelector('.aboutusdesc .desc').innerHTML = aboutusdescb.slice(0,130)+'...';
+            document.querySelector('#lookdetails i').style.cssText = "transform:rotate(0deg);"
+            document.querySelector('.aboutusdesc .desc').setAttribute('data-isshow','false')
+        }else{
+            document.querySelector('.aboutusdesc .desc').innerHTML = aboutusdescb
+            document.querySelector('#lookdetails i').style.cssText = "transform:rotate(-180deg);"
+            document.querySelector('.aboutusdesc .desc').setAttribute('data-isshow','true')
+        }
+    }
+    // 关于我们的查看详情
+    document.querySelector('#lookdetails').onclick=lookdetails;
+</script>
